@@ -1,0 +1,181 @@
+
+<h1>Flip Controller SDK</h1>
+<h3>目录</h3>
+<!--toc-->
+
+- [版本记录](#版本记录)
+- [名词约定](#名词约定)
+- [目录介绍](#目录介绍)
+- [按键定义](#按键定义)
+- [使用指南](#使用指南)
+	- [Android Phone](#android-phone)
+		- [1 安装BTConfig工具](#1-安装btconfig工具)
+		- [2 手柄配对](#2-手柄配对)
+		- [3 运行DeviceTest测试设备](#3-运行devicetest测试设备)
+		- [4 演示demo](#4-演示demo)
+	- [Window PC(TBD)](#window-pctbd)
+- [开发指南](#开发指南)
+	- [Unity](#unity)
+		- [1 开发环境要求](#1-开发环境要求)
+		- [2 准备](#2-准备)
+		- [3 SDK使用](#3-sdk使用)
+		- [4 编程(TBD)](#4-编程tbd)
+	- [Google Cardboard(TBD)](#google-cardboardtbd)
+	- [Google Daydream(TBD)](#google-daydreamtbd)
+	- [Windows Natvie C++(TBD)](#windows-natvie-ctbd)
+	- [Android Native(TBD)](#android-nativetbd)
+
+<!-- tocstop -->
+
+
+# 版本记录
+版本 | ChangeLOG | 更新日期
+---|--- |---
+v1.0.1-beta | 增加Flip Controller Unity3D SDK(Android/Win10)<br>增加Android绑定工具(BTConfig)|2017.03.13
+
+
+# 名词约定
+
+名称 | 解释
+---|---
+controller | 手柄
+HMD | 头戴显示器，即VR头显
+X-Cobra|手柄的别称
+
+
+# 目录介绍
+* **Demo**  	  ：针对主流的HMD，提供演示DEMO
+* **Document\Flip** ：说明文档
+* **Tools**：工具包  
+* **Unity**：Flip Controller Unity SDK  
+
+&emsp;
+# 按键定义
+<div align = center>
+<img src="./imgs/key_map.png" width="200">
+</div>
+
+>  注：短按'home'键回中
+
+&emsp;
+# 使用指南
+
+&emsp;
+## Android Phone
+步骤：
+1) 安装BTConfig工具
+2) 手柄配对
+3) 安装测试应用体验
+
+### 1 安装BTConfig工具
+1.1 在android手机上安装如下两个apk
+> - [BTConfig.apk](./../../Tools/BTConfig[1.0.0-Flip].apk): 用于手柄配对的工具
+> - [DeviceTest.apk](./../../Demo/DeviceTest.apk)：用于测试设备的工具，可以在手机上输出rotation、button等信息
+
+&emsp;
+### 2 手柄配对
+
+2.1 装入电池，手柄自动开机。
+
+2.2 打开手机上的蓝牙功能，并打开BTConfig工具。
+
+
+<div align = center>
+<img src="./imgs/img_btconfig_home.png" width="400">
+</div>
+
+
+2.3 先按下BTConfig的Controller的“Bind”按钮，然后同时按着手柄的'APP'和'HOME'键，配对成功后手柄状态变为"Paired"，退出应用；
+
+> 手柄只需要配对一次；更换新的手柄时，先按BTConfig的"Clear"按键，清除上一次的配对信息，然后重复手柄配对的步骤
+
+<div align = center>
+<img src="./imgs/img_btconfig_paird.png" width="400">
+</div>
+
+&emsp;
+
+### 3 运行DeviceTest测试设备
+设备和手机保持连接状态，运行DeviceTest，通过界面可观察到从手柄姿态、按键等信息。
+
+<div align = center>
+<img src="./imgs/img_deviceTest.png" width="800">
+</div>  
+
+&emsp;
+### 4 演示demo
+名称 | HMD
+---|---
+[PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesDOF3Cardboard.apk) | Google Cardboard
+[Playground for Cardboard.apk](./../../Demo/Playground_for_Cardboard.apk)| Google Cardboard
+
+## Window PC(TBD)
+
+
+&emsp;
+# 开发指南
+
+
+## Unity
+
+### 1 开发环境要求
+名称 | 要求
+---|---
+Operating System  |Windows 10<br>Mac OSX >= 10.7.5
+Bluetooth LE Dongle| 支持4.0 BLE 蓝牙适配器
+Unity3D引擎|5.4以上版本
+Apple XCode|TBD
+Google Android Studio|TBD
+
+### 2 准备
+1) 参考<使用指南>，安装平台的运行环境
+2) 下载[Unity SDK Plugin for Flip Controller](./../../Unity/Flip-v1.0.0-beta-0311.unitypackage)
+
+### 3 SDK使用
+1) 建立新的Unity3D project, 点击如下按钮：
+> Assets -> Import -> Package -> Custom Package
+
+选择将下载的"Unity SDK Plugin for Flip Controller"导入
+<div align = center>
+<img src="./imgs/img_unity3d_asset.png" width="600">
+</div>  
+
+&emsp;
+
+2) 点击如下按钮，选择DeviceTest场景：
+> Assets -> Ximmerse SDK -> DemoScenes -> 01 - Device Test
+<div align = center>
+<img src="./imgs/img_unity3d_selet_deviceTest.png" width="600">
+</div>  
+&emsp;
+
+2) 编译DeviceTest Demo，这里以Android平台为例
+- 1. 切换发布平台：
+> Files -> Build Setting -> 选择平台 -> Switch Platform
+<div align = center>
+<img src="./imgs/img_unity3d_switch_platform.png" width="600">
+</div>  
+&emsp;
+
+- 2.设置
+> 选择“Player Setting”按钮
+<div align = center>
+<img src="./imgs/img_unity3d_player_setting.png" width="400">
+</div>  
+
+&emsp;
+
+- 3.选择“Build”,编译DeviceTest应用，运行测试
+
+### 4 编程(TBD)
+1) 脚本说明
+2) Buttons
+3) Rotation
+4) Accelerometer
+5) Gyroscope
+6) Battery
+
+## Google Cardboard(TBD)
+## Google Daydream(TBD)
+## Windows Natvie C++(TBD)
+## Android Native(TBD)
