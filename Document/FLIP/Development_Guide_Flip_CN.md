@@ -145,7 +145,7 @@ Google Android Studio|TBD
 2) 点击如下按钮，选择DeviceTest场景：
 > Assets -> Ximmerse SDK -> DemoScenes -> 01 - Device Test
 <div align = center>
-<img src="./imgs/img_unity3d_selet_deviceTest.png" width="600">
+<img src="./imgs/img_unity3d_selet_devicetest.png" width="600">
 </div>  
 &emsp;
 
