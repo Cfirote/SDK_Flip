@@ -149,7 +149,7 @@ Google Android Studio|TBD
 </div>  
 &emsp;
 
-2) 编译DeviceTest Demo，这里以Android平台为例
+3) 编译DeviceTest Demo，这里以Android平台为例
 - 1. 切换发布平台：
 > Files -> Build Setting -> 选择平台 -> Switch Platform
 <div align = center>
@@ -158,7 +158,7 @@ Google Android Studio|TBD
 &emsp;
 
 - 2.设置
-> 选择“Player Setting”按钮
+> 选择“Player Setting”按钮，将API Level设置为19
 <div align = center>
 <img src="./imgs/img_unity3d_player_setting.png" width="400">
 </div>  
