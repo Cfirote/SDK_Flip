@@ -129,7 +129,7 @@ Google Android Studio|TBD
 
 ### 2 准备
 1) 参考<使用指南>，安装平台的运行环境
-2) 下载[Unity SDK Plugin for Flip Controller](./../../Unity/Flip-v1.0.0-beta-0311.unitypackage)
+2) 下载[Unity SDK Plugin for Flip Controller](https://github.com/Ximmerse/SDK_Flip/tree/master/Unity)
 
 ### 3 SDK使用
 1) 建立新的Unity3D project, 点击如下按钮：
