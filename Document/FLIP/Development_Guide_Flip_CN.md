@@ -19,7 +19,7 @@
 		- [1 开发环境要求](#1-开发环境要求)
 		- [2 准备](#2-准备)
 		- [3 SDK使用](#3-sdk使用)
-		- [4 编程(TBD)](#4-编程tbd)
+		- [4 编程](#4-编程)
 	- [Google Cardboard(TBD)](#google-cardboardtbd)
 	- [Google Daydream(TBD)](#google-daydreamtbd)
 	- [Windows Natvie C++(TBD)](#windows-natvie-ctbd)
@@ -167,13 +167,45 @@ Google Android Studio|TBD
 
 - 3.选择“Build”,编译DeviceTest应用，运行测试
 
-### 4 编程(TBD)
+### 4 编程
 1) 脚本说明
+	- XDevicePlugin
+	  >Unity和native之间的通信桥梁<br>
+	  >注意：通常这个类在引擎中没有直接使用，因为这个类的数据是原始数据，必须进一步计算才能正确使用。<br>
+	  >Namespace<br>
+	  >Ximmerse.InputSystem<br>
+	- ControllerInput
+	  >包含控制器信息，如按钮状态、原始位置、原始旋转等<br>
+	  >Namespace<br>
+	  >Ximmerse.InputSystem<br>
+	- TrackedObject
+	  >在VR中绑定控制器，获取并使用手柄的IMU等信息<br>	
+	- TrackedHead
+	  >继承TrackedObject，在VR中绑定Head anchor,获得并使用HMD头部数据<br>
+	- ControllerInputManager
+	  >单例，初始化所有的controllerinput，管理controllerinput<br>
+	  >Namespace<br>
+	  >Ximmerse.InputSystem<br>
+	- DeviceStatus
+	  >获取并使用输入设备的状态，如连接状态电量等信息
 2) Buttons
-3) Rotation
-4) Accelerometer
-5) Gyroscope
-6) Battery
+	- controllerInput.GetButton(ControllerButton buttonMask) //按键一直按住
+	- controllerInput.GetButtonDown(ControllerButton buttonMask) //按键按下
+	- controllerInput.GetButtonUp(ControllerButton buttonMask) //按键抬起
+3) touchPos
+	- controllerInput.touchPos
+4) Rotation
+	- controllerInput.GetRotation()
+5) Accelerometer
+	- controllerInput.GetAccelerometer()
+6) Gyroscope
+	- controllerInput.GetGyroscope()
+7) Battery
+	- controllerInput.batteryLevel
+8) connectionState
+	- controllerInput.connectionState
+9) Recenter
+	- controllerInput.Recenter()
 
 ## Google Cardboard(TBD)
 ## Google Daydream(TBD)
