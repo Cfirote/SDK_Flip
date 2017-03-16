@@ -20,8 +20,8 @@
 		- [2 准备](#2-准备)
 		- [3 SDK使用](#3-sdk使用)
 		- [4 编程](#4-编程)
-	- [Google Cardboard(TBD)](#google-cardboardtbd)
-	- [Google Daydream(TBD)](#google-daydreamtbd)
+	- [Google Cardboard](#google-cardboard)
+	- [Google Daydream](#google-daydream)
 	- [Windows Natvie C++(TBD)](#windows-natvie-ctbd)
 	- [Android Native(TBD)](#android-nativetbd)
 
@@ -207,7 +207,32 @@ Google Android Studio|TBD
 9) Recenter
 	- controllerInput.Recenter()
 
-## Google Cardboard(TBD)
-## Google Daydream(TBD)
+## Google Cardboard
+1) 建立新的Unity3D project, 导入unitypackage
+	> Assets -> Import -> Package -> Custom Package 选择Flip-v1.0.0-beta-0313.unitypackage
+2) 下载并导入Google VR unitypackage
+	> Assets -> Import -> Package -> Custom Package 选择GoogleVRForUnity.unitypackage
+3) 编译PickCubes demo
+	> Files -> Build Setting -> 选择平台Android -> Switch Platform
+4) 设置	
+	> Files -> Build Setting -> Player Settings 填写Bundle Identifier，选择Minimum API Level为API level 19<br>
+	<div align = center>
+	<img src="./imgs/img_unity3d_player_setting.png" width="400">
+	</div>  
+	&emsp;
+5) 导出
+	> 连接手机，点击Build And Run
+## Google Daydream
+	    3DOF手柄完全兼容Daydream平台，只需用上述蓝牙配对工具配对好手柄，就可以用手柄控制Dayderam的应用；
+	所以在开发Daydream应用的时候只需按照Google的方法和流程进行开发，无需导入我们的package
+1) 下载Unity Technical Preview For Daydream  [点击这里下载](https://unity3d.com/cn/partners/google/daydream)
+2) 建立新的Unity3D project, 下载并导入Google VR unitypackage
+	> Assets -> Import -> Package -> Custom Package 选择GoogleVRForUnity.unitypackage
+3) 编译gvr demo
+	> Files -> Build Setting -> 选择平台Android -> Switch Platform
+4) 设置	
+	> Files -> Build Setting -> Player Settings 勾选Virtual Reality Supported,添加Daydream；填写Bundle Identifier
+5) 导出
+	> 连接手机，点击Build And Run
 ## Windows Natvie C++(TBD)
 ## Android Native(TBD)
