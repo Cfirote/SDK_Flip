@@ -13,7 +13,7 @@
 		- [2 手柄配对](#2-手柄配对)
 		- [3 运行DeviceTest测试设备](#3-运行devicetest测试设备)
 		- [4 演示demo](#4-演示demo)
-	- [Window PC(TBD)](#window-pctbd)
+	- [Window PC](#window-pc)
 - [开发指南](#开发指南)
 	- [Unity](#unity)
 		- [1 开发环境要求](#1-开发环境要求)
@@ -99,7 +99,7 @@ X-Cobra|手柄的别称
 设备和手机保持连接状态，运行DeviceTest，通过界面可观察到从手柄姿态、按键等信息。
 
 <div align = center>
-<img src="./imgs/img_deviceTest.png" width="800">
+<img src="./imgs/img_deviceTest.png" width="600">
 </div>  
 
 &emsp;
@@ -109,8 +109,54 @@ X-Cobra|手柄的别称
 [PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesDOF3Cardboard.apk) | Google Cardboard
 [Playground for Cardboard.apk](./../../Demo/Playground_for_Cardboard.apk)| Google Cardboard
 
-## Window PC(TBD)
+## Window PC
+步骤：
+1) 安装蓝牙驱动
+2) 手柄配对
+3) 运行DeviceTest测试设备
+### 1 安装蓝牙驱动
+>未带蓝牙的台式机箱，笔记本电脑跳过此步骤
 
+1.1 下载安装CSR Driver [点击这里下载](https://github.com/Ximmerse/SDK/tree/master/Drivers/CSR%20Drivers)<br>
+<br>
+1.2 插入CSR Dongle,设备管理里面将其改为系统蓝牙
+<div align = center>
+<img src="./imgs/img_pc_ble1.png" width="400">
+</div>
+
+1.3 右键点击 更新驱动程序软件
+<div align = center>
+<img src="./imgs/img_pc_ble2.png" width="400">
+</div>
+
+1.4 点击 浏览计算机
+<div align = center>
+<img src="./imgs/img_pc_ble3.png" width="400">
+</div>
+
+1.5 点击 从计算机的设备驱动列表中选取
+<div align = center>
+<img src="./imgs/img_pc_ble4.png" width="400">
+</div>
+
+&emsp;
+
+1.6 选择 Generic Bluetooth Adapter 点击 下一步  windows状态栏出现蓝牙功能
+### 2 手柄配对
+打开系统蓝牙界面，打开手柄，配对手柄
+<div align = center>
+<img src="./imgs/img_pc_ble5.png" width="400">
+</div>
+
+&emsp;
+
+### 3 运行DeviceTest测试设备
+电脑和手柄保持连接状态，运行DeviceTest[v1.0.0-beta].exe，通过界面可观察到从手柄姿态、按键等信息
+<div align = center>
+<img src="./imgs/img_deviceTest.png" width="600">
+</div>  
+
+&emsp;
 
 &emsp;
 # 开发指南
