@@ -25,10 +25,10 @@
 		- [4 编程](#4-编程)
 	- [Google Cardboard](#google-cardboard)
 	- [Google Daydream](#google-daydream)
-	- [Windows Natvie C++](#windows-natvie-c++)
-		- [1 SDK使用步骤](#1-SDK使用步骤)
-		- [2 SDK流程图](#2-SDK流程图)
-		- [3 编程API](#3-编程API)
+	- [Windows Native C++](#windows-native-c)
+		- [1 SDK使用步骤](#1-sdk使用步骤)
+		- [2 SDK流程图](#2-sdk流程图)
+		- [3 编程API](#3-编程api)
 	- [Android Native(TBD)](#android-nativetbd)
 
 <!-- tocstop -->
@@ -286,7 +286,7 @@ Google Android Studio|TBD
 	> Files -> Build Setting -> Player Settings 勾选Virtual Reality Supported,添加Daydream；填写Bundle Identifier
 5) 导出
 	> 连接手机，点击Build And Run
-## Windows Natvie C++
+## Windows Native C++
 
 ### 1 SDK使用步骤
 1) 系统蓝牙连接手柄，如下：
