@@ -25,7 +25,10 @@
 		- [4 编程](#4-编程)
 	- [Google Cardboard](#google-cardboard)
 	- [Google Daydream](#google-daydream)
-	- [Windows Natvie C++(TBD)](#windows-natvie-ctbd)
+	- [Windows Natvie C++](#windows-natvie-c++)
+		- [1 SDK使用步骤](#1-SDK使用步骤)
+		- [2 SDK流程图](#2-SDK流程图)
+		- [3 编程API](#3-编程API)
 	- [Android Native(TBD)](#android-nativetbd)
 
 <!-- tocstop -->
@@ -283,5 +286,59 @@ Google Android Studio|TBD
 	> Files -> Build Setting -> Player Settings 勾选Virtual Reality Supported,添加Daydream；填写Bundle Identifier
 5) 导出
 	> 连接手机，点击Build And Run
-## Windows Natvie C++(TBD)
+## Windows Natvie C++
+
+### 1 SDK使用步骤
+1) 系统蓝牙连接手柄，如下：
+<div align = center>
+<img src="./imgs/native C++ 1.png" width="400">
+</div>  
+
+&emsp;
+
+2) 打开Native C++ sdk项目解决方案
+	> Native C++\windows\vs2015\vs2015.sln
+3) 编译解决方案
+4) 拷贝dll（或配置环境变量）
+	> Native C++\windows\libs\x64下的dll拷贝至<br>
+	> Native C++\windows\vs2015\x64\Debug
+5) 运行程序查看手柄连接状态和数据
+<div align = center>
+<img src="./imgs/native C++ 2.png" width="600">
+</div>  
+
+&emsp;
+
+### 2 SDK流程图
+<div align = center>
+<img src="./imgs/native C++ 3.png" width="600">
+</div>  
+
+&emsp;
+
+### 3 编程API
+> Native C++ sdk API位于xdevide.h，具体API接口如下：<br>
+- int XDeviceInit(void)
+	> 初始化，并连接手柄
+- int XDeviceExit(void)
+	> 退出，并断开手柄
+- int XDeviceGetInputDeviceHandle(char* name)
+	> 获取设备句柄 <br>
+	> param: "XCobra-0" <br>
+	> return: handle<br>
+- int XDeviceUpdateInputState(int which)
+	> 更新设备状态<br>
+	> param: handle<br>
+- int XDeviceGetInt(int which, int fieldID, int defaultValue)
+	> 获取设备的连接状态或电量等值<br>
+	> param: handle,FieldID,default<br>
+	> return: int value<br>
+- int XDeviceGetInputState(int which, void* state)
+	> 获取手柄按键和IMU等具体信息<br>	
+	> param: handle,state<br>
+	> return: errorCode<br>
+- int XDeviceSendMessage(int which, int Msg, int wParam, int lParam)
+	> 发送命令，如回中kMessage_RecenterSensor<br>
+	> param: handle,MessageID,wParam,lParam<br>
+	
 ## Android Native(TBD)
