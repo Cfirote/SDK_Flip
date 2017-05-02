@@ -76,7 +76,7 @@ X-Cobra|手柄的别称
 ### 1 安装BTConfig工具
 1.1 在android手机上安装如下两个apk
 > - [BTConfig.apk](./../../Tools/BTConfig[1.0.0-Flip].apk): 用于手柄配对的工具
-> - [DeviceTest.apk](./../../Demo/DeviceTest.apk)：用于测试设备的工具，可以在手机上输出rotation、button等信息
+> - [DeviceTest.apk](./../../Demo/DeviceTestX3C01[v1.0.0].apk)：用于测试设备的工具，可以在手机上输出rotation、button等信息
 
 &emsp;
 ### 2 手柄配对
@@ -112,8 +112,8 @@ X-Cobra|手柄的别称
 ### 4 演示demo
 名称 | HMD
 ---|---
-[PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesDOF3Cardboard.apk) | Google Cardboard
-[Playground for Cardboard.apk](./../../Demo/Playground_for_Cardboard.apk)| Google Cardboard
+[PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesCardboardX3C01[v1.0.0].apk) | Google Cardboard
+[Playground for Cardboard.apk](./../../Demo/Playground for Cardboard.apk)| Google Cardboard
 
 ## Window PC
 步骤：
