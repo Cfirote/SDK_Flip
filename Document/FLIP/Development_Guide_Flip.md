@@ -71,7 +71,7 @@ Steps：
 ### 1 Install BTConfig
 1.1 Install the following apks on Android phone:
 > - [BTConfig.apk](./../../Tools/BTConfig[1.0.0-Flip].apk): Controller pairing tool
-> - [DeviceTest.apk](./../../Demo/DeviceTest.apk)：A Flip testing tool
+> - [DeviceTest.apk](./../../Demo/DeviceTestX3C01[v1.0.0].apk)：A Flip testing tool
 
 &emsp;
 ### 2 Controller Pairing
@@ -107,8 +107,8 @@ Open DeviceTest application. You should be able to see the data of the controlle
 ### 4 Demo
 APK Name | HMD
 ---|---
-[PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesDOF3Cardboard.apk) | Google Cardboard
-[Playground for Cardboard.apk](./../../Demo/Playground_for_Cardboard.apk)| Google Cardboard
+[PickCubesDOF3Cardboard.apk](./../../Demo/PickCubesCardboardX3C01[v1.0.0].apk) | Google Cardboard
+[Playground for Cardboard.apk](./../../Demo/Playground for Cardboard.apk)| Google Cardboard
 
 ## Window PC(TBD)
 
